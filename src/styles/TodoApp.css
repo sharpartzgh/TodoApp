@@ -1,0 +1,180 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* General Todo App Styling */
+.todo-app {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 600px;
+  font-family: Arial, sans-serif;
+}
+
+.todo-app h1{
+  margin-bottom: 1.5rem;
+}
+
+/* Styling the Todo Input Section */
+#todo-input {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#todo-input input {
+  padding: 0.8rem;
+  width: 70%;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+#todo-input input:focus {
+  outline: none;
+  border-color: #4caf50; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#todo-input button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #4caf50; 
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+#todo-input button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#todo-input button:active {
+  transform: scale(0.95);
+}
+
+/* Styling the Todo List Section */
+#todo-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+#todo-list li:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling the Todo Text */
+.todo-text {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+  margin-left: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.completed .todo-text {
+  text-decoration: line-through;
+  color: #888; /* Dimmed color for completed tasks */
+}
+
+/* Styling the Checkbox */
+.toggle-complete {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Styling the Delete Button */
+.delete-todo {
+  padding: 0.5rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #f44336; /* Red background */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.delete-todo:hover {
+  background-color: #e53935; /* Slightly darker red on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.delete-todo:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #todo-input {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  #todo-input input {
+    width: 90%; /* Full width on smaller screens */
+  }
+
+  #todo-input button {
+    width: 90%;
+  }
+
+  #todo-list li {
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 90%;
+    margin: 1.5rem ;
+
+  }
+
+  .todo-text {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .delete-todo {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  #todo-input input {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  #todo-input button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
