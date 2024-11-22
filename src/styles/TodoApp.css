@@ -4,8 +4,6 @@
   box-sizing: border-box;
 }
 
-
-
 /* General Todo App Styling */
 .todo-app {
   text-align: center;
@@ -56,7 +54,7 @@
 }
 
 #todo-input button:hover {
-  background-color: #45a049; /* Slightly darker green on hover */
+  background-color: #45a049; 
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -115,7 +113,7 @@
   font-size: 0.9rem;
   font-weight: bold;
   color: #fff;
-  background-color: #f44336; /* Red background */
+  background-color: #f44336; 
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -124,7 +122,7 @@
 }
 
 .delete-todo:hover {
-  background-color: #e53935; /* Slightly darker red on hover */
+  background-color: #e53935; 
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -141,7 +139,7 @@
   }
 
   #todo-input input {
-    width: 90%; /* Full width on smaller screens */
+    width: 90%; 
   }
 
   #todo-input button {
@@ -177,4 +175,89 @@
     font-size: 0.9rem;
     padding: 0.6rem 1rem;
   }
+}
+
+/* styling for edititing todo item  */
+.editing {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.editing input {
+  flex: 1;
+  padding: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.editing button {
+  padding: 0.3rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.editing button:first-of-type {
+  background-color: #4caf50;
+  color: white;
+}
+
+.editing button:last-of-type {
+  background-color: #f44336;
+  color: white;
+}
+
+.editing {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.editing input {
+  flex: 1;
+  padding: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.editing button {
+  padding: 0.3rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.editing button:first-of-type {
+  background-color: #4caf50;
+  color: white;
+}
+
+.editing button:last-of-type {
+  background-color: #f44336;
+  color: white;
+}
+
+.edit-todo {
+  margin: 0 0.5rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #4caf50; 
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.edit-todo:hover {
+  background-color:#45a049; 
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.edit-todo:active {
+  transform: scale(0.95);
 }
